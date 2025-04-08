@@ -1,0 +1,18 @@
+.language-select {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .language-option {
+    padding: 10px 20px;
+    border: 2px solid red; /* Adjust this to your design */
+    background-color: white;
+    cursor: pointer;
+  }
+  
+  .language-option.selected {
+    font-weight: bold;
+    background-color: #f0f0f0; /* Adjust this to your design */
+  }
+  

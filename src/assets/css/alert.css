@@ -1,0 +1,20 @@
+.address_alert_copy {
+    position: absolute; /* Ensure this is set to absolute */
+    top: 50%;
+    left: 50%;
+    color: #fff;
+    transform: translate(-50%, -50%);
+    z-index: 1000; /* Ensure the alert is on top */
+  }
+  .custom_alert {
+    position: absolute;
+    left: 50%;
+    top: 100%; /* Adjust this to position the alert correctly */
+    background-color: #000000b3;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+    transform: translateX(-50%);
+    z-index: 1000; /* Ensure the alert is on top */
+  }

@@ -1,0 +1,29 @@
+/* SwipeMember.css */
+
+.membership-content {
+  overflow: hidden;
+}
+
+.membership-item {
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+/* Animation when adding a new member */
+.fade-in-out {
+  animation: fadeInOut 1s ease;
+}
+
+/* Keyframes for the fade in and out animation */
+@keyframes fadeInOut {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
