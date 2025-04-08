@@ -3,6 +3,10 @@ import { useTranslation } from "react-i18next";
 import axios from "axios";
 import Loader from "../../../component/extra/loader";
 import { useState } from "react";
+import { RiMoneyDollarCircleLine } from "react-icons/ri";
+import { IoCashOutline } from "react-icons/io5";
+import { FaDownload } from "react-icons/fa6";
+import { FaRegBuilding } from "react-icons/fa";
 
 const HomeLinks = () => {
   const { t } = useTranslation();
@@ -75,10 +79,7 @@ const HomeLinks = () => {
       {isLoader ? <Loader /> : null}
       <Link to="/recharge-method" home-content="" className="btn recharge">
         <div home-content="" className="icon">
-          <div
-            home-content=""
-            className="i-new-icon-class text-28px c-$text-white"
-          ></div>
+          <RiMoneyDollarCircleLine size={28} color="#fff" />
           {/* <div
             home-content=""
             className="i-ic:outline-attach-money text-28px c-$text-white"
@@ -91,10 +92,11 @@ const HomeLinks = () => {
 
       <Link to="/withdraw-trx" home-content="" className="btn withdraw">
         <div home-content="" className="icon">
-          <div
+          {/* <div
             home-content=""
             className="i-solar:hand-money-outline text-28px c-$text-white"
-          ></div>
+          ></div> */}
+          <IoCashOutline size={28} color="#fff" />
         </div>
         <div home-content="" className="label">
           {t("withdraw")}
@@ -104,10 +106,11 @@ const HomeLinks = () => {
       {/* Correct onClick event handler */}
       <div home-content="" className="btn download" onClick={downloadApp}>
         <div home-content="" className="icon">
-          <div
+          {/* <div
             home-content=""
             className="i-radix-icons:download text-28px c-$text-white"
-          ></div>
+          ></div> */}
+          <FaDownload size={28} color="#fff" />
         </div>
         <div home-content="" className="label">
           {t("app")}
@@ -116,10 +119,11 @@ const HomeLinks = () => {
 
       <Link to="/company-profile" home-content="" className="btn company">
         <div home-content="" className="icon">
-          <div
+          {/* <div
             home-content=""
             className="i-iconoir:city text-28px c-$text-white"
-          ></div>
+          ></div> */}
+          <FaRegBuilding size={28} color="#fff" />
         </div>
         <div home-content="" className="label">
           {t("company_profile")}

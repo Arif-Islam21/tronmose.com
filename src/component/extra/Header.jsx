@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import logo from "../../assets/images/logo2.webp";
+// import logo from "../../assets/images/logo2.webp";
+import logo from "../../assets/images/logo/logo.png";
 import { useTranslation } from "react-i18next";
 
 const Header = ({ toggleLangPopup }) => {
@@ -89,7 +90,7 @@ const Header = ({ toggleLangPopup }) => {
             <div className="left name text-18px!">
               <div className=":uno: base-logo flex items-center small-logo">
                 <img
-                  className="site-img h-full w-full rd-50%_"
+                  className="site-img h-full w-full rounded rd-50%_"
                   src={logo}
                   alt="logo"
                 />
