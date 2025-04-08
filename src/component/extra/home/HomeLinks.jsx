@@ -75,14 +75,14 @@ const HomeLinks = () => {
       {isLoader ? <Loader /> : null}
       <Link to="/recharge-method" home-content="" className="btn recharge">
         <div home-content="" className="icon">
-          {/* <div
-            home-content=""
-            className="i-ic:round-attach-money text-28px c-$text-white"
-          ></div> */}
           <div
             home-content=""
-            className="i-ic:outline-attach-money text-28px c-$text-white"
+            className="i-new-icon-class text-28px c-$text-white"
           ></div>
+          {/* <div
+            home-content=""
+            className="i-ic:outline-attach-money text-28px c-$text-white"
+          ></div> */}
         </div>
         <div home-content="" className="label">
           {t("recharge")}
