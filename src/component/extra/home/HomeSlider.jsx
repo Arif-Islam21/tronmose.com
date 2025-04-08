@@ -3,8 +3,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Carousel } from "react-bootstrap";
 
 // image import
-import slide1 from "../../../assets/images/slider/homeSlider1.png";
-import slide3 from "../../../assets/images/slider/homeSlider3.png";
+import slide1 from "../../../assets/images/slider/banner1.png";
+import slide3 from "../../../assets/images/slider/banner2.png";
+// import slide1 from "../../../assets/images/slider/homeSlider1.png";
+// import slide3 from "../../../assets/images/slider/homeSlider3.png";
 
 const HomeSlider = () => {
   return (
