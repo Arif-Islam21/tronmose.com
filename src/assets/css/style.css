@@ -28619,7 +28619,8 @@ html {
   --vh: 3.59px;
   --text-gray6: #aaa;
   --text-gray: #999;
-  --primary: #5f8d4e;
+  /* --primary: #5f8d4e; */
+  --primary: #85278B;
   --primary-light: #e7f6f2;
   /* --bg: #749f82;  */
   --bg: #85278b;

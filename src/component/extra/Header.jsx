@@ -95,7 +95,7 @@ const Header = ({ toggleLangPopup }) => {
                   alt="logo"
                 />
               </div>
-              <span className="text-truncate">TRONMOSE</span>
+              <span className="text-truncate">TRONRICH</span>
             </div>
             <div className="right">
               <div>
