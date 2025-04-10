@@ -225,8 +225,8 @@ const Team = () => {
               {/* LEVEL 1 DATA */}
               <div className="bg-deep-card p-3 rounded-2 px-4">
                 <div className="flex item-center justify-between">
-                  <h1>Level 1 Data</h1>
-                  <h3 className="flex item-center justify-between cursor-pointer fs-6 gap-2">
+                  <h1 className="fs-6 fw-bold">Level 1 Data</h1>
+                  <h3 className="flex item-center justify-between cursor-pointer fs-6 fw-bold gap-2">
                     Member List <FaRegArrowAltCircleRight />
                   </h3>
                 </div>
