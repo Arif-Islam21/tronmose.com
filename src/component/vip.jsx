@@ -31,7 +31,6 @@ const Vip = () => {
   const { t } = useTranslation();
   const [data, setData] = useState({});
   const navigate = useNavigate();
-  console.log(data);
   const formatDate = (dateString) => {
     const date = new Date(dateString);
     return date
@@ -137,6 +136,7 @@ const Vip = () => {
 
             <div className="container-card relative rd-$card-radius p-$mg c-$btn-text">
               {data?.vips?.map((item, index) => {
+                console.log(item);
                 return (
                   <div
                     key={index}
@@ -148,13 +148,15 @@ const Vip = () => {
                           <div className="bg-deep-card rounded-3 p-3 border-top-5 border-warning">
                             <div className="px-4 py-2">
                               <h2 className="fs-3 px-3 border-start-3 ">
-                                {t("WM package 1")}
+                                WM package {item?.id}
                               </h2>
                             </div>
                             <div className="flex flex-column justify-content-center align-items-center gap-2 rounded-2 bg-$bg-card py-2 px-3">
                               <div className="flex justify-between items-center w-100">
                                 <h2 className="fs-6">{t("Daily Earning")}</h2>
-                                <h2 className="fw-bold">2 {t("times")}</h2>
+                                <h2 className="fw-bold">
+                                  {item?.income_from} {t("times")}
+                                </h2>
                               </div>
                               <div className="flex justify-between items-center w-100">
                                 <h2 className="fs-6">
@@ -164,15 +166,17 @@ const Vip = () => {
                               </div>
                               <div className="flex justify-between items-center w-100">
                                 <h2 className="fs-6">{t("Valid Time")}</h2>
-                                <h2 className="fw-bold">2 {t("61Days")}</h2>
+                                <h2 className="fw-bold">
+                                  {item?.income_to} Days
+                                </h2>
                               </div>
                             </div>
                             <div>
                               <button
                                 onClick={clickRecharge}
-                                className="btn btn-success mt-2 mx-auto w-100"
+                                className="btn btn-light mt-2 mx-auto w-100"
                               >
-                                6.00 USDT Unlock Now
+                                {item?.requred_to?.slice(0, 2)} USDT Unlock Now
                               </button>
                             </div>
                           </div>

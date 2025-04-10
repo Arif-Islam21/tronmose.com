@@ -1,7 +1,7 @@
-import fssc from "../../../assets/images/fssc.webp";
-import bros from "../../../assets/images/bros.webp";
-import certifiedIso from "../../../assets/images/certified_iso.webp";
-import haccp from "../../../assets/images/haccp.webp";
+import fssc from "../../../assets/images/1x/brand1.png";
+import bros from "../../../assets/images/1x/brand2.png";
+import certifiedIso from "../../../assets/images/1x/brand3.png";
+import haccp from "../../../assets/images/1x/brand4.png";
 import { useTranslation } from "react-i18next";
 
 const HomeRegulator = () => {
