@@ -27,10 +27,11 @@ import SupportLink from "./extra/supportLink";
 import LanguagePopUp from "./extra/LanguagePopUp";
 import TelegramPopUp from "./extra/TelegramPopUp";
 
-const vip = () => {
+const Vip = () => {
   const { t } = useTranslation();
   const [data, setData] = useState({});
   const navigate = useNavigate();
+  console.log(data);
   const formatDate = (dateString) => {
     const date = new Date(dateString);
     return date
@@ -115,12 +116,17 @@ const vip = () => {
           <div vip-page="" className="vip-wrap">
             <div className="vip-top-bar container-card relative rd-$card-radius p-$mg c-$btn-text box-shadow">
               <div className="flex items-center">
-                <div className="text-sm">{t('level')}</div>
-                <div className="ml-auto font-bold text-green">{t("vip")} {data?.user?.my_vip}</div>
+                <div className="text-sm">{t("level")}</div>
+                <div className="ml-auto font-bold text-green">
+                  {t("vip")} {data?.user?.my_vip}
+                </div>
               </div>
               <div className="mt-10px flex items-center">
                 <div className="text-sm">{t("recharge_amountt")}</div>
-                <div className="ml-auto font-bold text-$primary"> {data?.user?.balance} TRX</div>
+                <div className="ml-auto font-bold text-$primary">
+                  {" "}
+                  {data?.user?.balance} TRX
+                </div>
               </div>
               <a className="base-main-btn flex items-center justify-center mt-10px! h-40px!">
                 <div onClick={clickRecharge} className="base-main-btn-content">
@@ -132,24 +138,81 @@ const vip = () => {
             <div className="container-card relative rd-$card-radius p-$mg c-$btn-text">
               {data?.vips?.map((item, index) => {
                 return (
-                  <div onClick={clickRecharge} className="vip-info-item" key={index}>
-                  <div className="info-item">
-                    <span className="text-16px font-bold">{t("vip")} {item.id}</span>
-                  </div>
-                  <div className="bg-$bg-input bg-deep-card p-10px rd-$radius">
-                    <div className="info-item">
-                      <span className="text-sm">{t("recharge_amountt")}</span>
-                      <span className="text-xs">{Math.floor(item.requred_from)} ~ {Math.floor(item.requred_to)} TRX</span>
+                  <div
+                    key={index}
+                    className="bg-$bg-card px-4 py-3 my-3 rounded-2 w-100"
+                  >
+                    <div className="container">
+                      <div className="row row-cols-1 g-3">
+                        <div className="col">
+                          <div className="bg-deep-card rounded-3 p-3 border-top-5 border-warning">
+                            <div className="px-4 py-2">
+                              <h2 className="fs-3 px-3 border-start-3 ">
+                                {t("WM package 1")}
+                              </h2>
+                            </div>
+                            <div className="flex flex-column justify-content-center align-items-center gap-2 rounded-2 bg-$bg-card py-2 px-3">
+                              <div className="flex justify-between items-center w-100">
+                                <h2 className="fs-6">{t("Daily Earning")}</h2>
+                                <h2 className="fw-bold">2 {t("times")}</h2>
+                              </div>
+                              <div className="flex justify-between items-center w-100">
+                                <h2 className="fs-6">
+                                  {t("Investment period：")}
+                                </h2>
+                                <h2 className="fw-bold">2 {t("Days")}</h2>
+                              </div>
+                              <div className="flex justify-between items-center w-100">
+                                <h2 className="fs-6">{t("Valid Time")}</h2>
+                                <h2 className="fw-bold">2 {t("61Days")}</h2>
+                              </div>
+                            </div>
+                            <div>
+                              <button
+                                onClick={clickRecharge}
+                                className="btn btn-success mt-2 mx-auto w-100"
+                              >
+                                6.00 USDT Unlock Now
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <div className="info-item">
-                      <span className="text-sm">{t("Mining_Income")}</span>
-                      <span className="text-sm text-green">{item.income_from}%</span>
-                    </div>
                   </div>
-                </div>
                 );
               })}
 
+              {/* {data?.vips?.map((item, index) => {
+                return (
+                  <div
+                    onClick={clickRecharge}
+                    className="vip-info-item"
+                    key={index}
+                  >
+                    <div className="info-item">
+                      <span className="text-16px font-bold">
+                        {t("vip")} {item.id}
+                      </span>
+                    </div>
+                    <div className="bg-$bg-input bg-deep-card p-10px rd-$radius">
+                      <div className="info-item">
+                        <span className="text-sm">{t("recharge_amountt")}</span>
+                        <span className="text-xs">
+                          {Math.floor(item.requred_from)} ~{" "}
+                          {Math.floor(item.requred_to)} TRX
+                        </span>
+                      </div>
+                      <div className="info-item">
+                        <span className="text-sm">{t("Mining_Income")}</span>
+                        <span className="text-sm text-green">
+                          {item.income_from}%
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })} */}
             </div>
           </div>
         </div>
@@ -172,4 +235,4 @@ const vip = () => {
   );
 };
 
-export default vip;
+export default Vip;

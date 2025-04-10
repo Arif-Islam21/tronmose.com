@@ -28630,6 +28630,11 @@ html {
   --btn-bg2: #a9af7e;
   --btn-text: #fff;
 }
+
+.border-start-3 {
+  border-left: 6px solid var(--btn-bg2);
+  border-radius: 0, 10px, 10px, 0;
+}
 /* .trsx {
   opacity: 0;
   visibility: hidden;

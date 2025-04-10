@@ -37,7 +37,7 @@ const Team = () => {
   const { t } = useTranslation();
   const [data, setData] = useState({});
   const [isLoading, setIsLoading] = useState(false); // State to control loader visibility
-  console.log(data);
+  // console.log(data);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -205,7 +205,7 @@ const Team = () => {
                 {/* PREVIOUS CODE CLOSED */}
                 <div className="py-2 px-4 flex gap-4 items-center justify-between rounded-lg">
                   <div className="p-4 bg-deep-card rounded-2 w-100">
-                    <p className="text-sm">total user revenue</p>
+                    <p className="text-sm">{t("total user revenue")}</p>
                     <h3 className="fs-5 text-yellow">
                       {data?.user?.demo_balance || "0.0"}USDT
                     </h3>
