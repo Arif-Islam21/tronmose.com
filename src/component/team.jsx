@@ -223,7 +223,7 @@ const Team = () => {
             </div>
             <div className="bg-$bg-card px-4 py-3 my-3 rounded-2 h-10 w-100">
               {/* LEVEL 1 DATA */}
-              <div className="bg-deep-card p-3 rounded-2 px-4">
+              <div className="bg-deep-card p-3 rounded-2 mb-3 px-4">
                 <div className="flex item-center justify-between">
                   <h1 className="fs-6 fw-bold">Level 1 Data</h1>
                   <h3 className="flex item-center justify-between cursor-pointer fs-6 fw-bold gap-2">
@@ -231,6 +231,77 @@ const Team = () => {
                   </h3>
                 </div>
                 {/* TITLE ENDS HERE */}
+
+                <div className="container mt-2">
+                  <div className="row row-cols-1 row-cols-md-3 g-2 ">
+                    <div className="flex flex-col justify-center items-center">
+                      <h3>0</h3>
+                      <h4>Total headcount</h4>
+                    </div>
+                    <div className="flex flex-col justify-center items-center">
+                      <h3>0</h3>
+                      <h4>Number of Active</h4>
+                    </div>
+                    <div className="flex flex-col justify-center items-center">
+                      <h3>0</h3>
+                      <h4>Team Top Up</h4>
+                    </div>
+                    <div className="flex flex-col justify-center items-center">
+                      <h3>0</h3>
+                      <h4>Total Return</h4>
+                    </div>
+                    <div className="flex flex-col justify-center items-center">
+                      <h3>0</h3>
+                      <h4>Today&apos;s Earnings</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {/* LEVEL 2 DATA */}
+              <div className="bg-deep-card p-3 rounded-2 mb-3 px-4">
+                <div className="flex item-center justify-between">
+                  <h1 className="fs-6 fw-bold">Level 2 Data</h1>
+                  <h3 className="flex item-center justify-between cursor-pointer fs-6 fw-bold gap-2">
+                    Member List <FaRegArrowAltCircleRight />
+                  </h3>
+                </div>
+                {/* TITLE ENDS HERE */}
+
+                <div className="container mt-2">
+                  <div className="row row-cols-1 row-cols-md-3 g-2 ">
+                    <div className="flex flex-col justify-center items-center">
+                      <h3>0</h3>
+                      <h4>Total headcount</h4>
+                    </div>
+                    <div className="flex flex-col justify-center items-center">
+                      <h3>0</h3>
+                      <h4>Number of Active</h4>
+                    </div>
+                    <div className="flex flex-col justify-center items-center">
+                      <h3>0</h3>
+                      <h4>Team Top Up</h4>
+                    </div>
+                    <div className="flex flex-col justify-center items-center">
+                      <h3>0</h3>
+                      <h4>Total Return</h4>
+                    </div>
+                    <div className="flex flex-col justify-center items-center">
+                      <h3>0</h3>
+                      <h4>Today&apos;s Earnings</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {/* LEVEL 3 DATA */}
+              <div className="bg-deep-card p-3 rounded-2 mb-3 px-4">
+                <div className="flex item-center justify-between">
+                  <h1 className="fs-6 fw-bold">Level 3 Data</h1>
+                  <h3 className="flex item-center justify-between cursor-pointer fs-6 fw-bold gap-2">
+                    Member List <FaRegArrowAltCircleRight />
+                  </h3>
+                </div>
+                {/* TITLE ENDS HERE */}
+
                 <div className="container mt-2">
                   <div className="row row-cols-1 row-cols-md-3 g-2 ">
                     <div className="flex flex-col justify-center items-center">
@@ -258,8 +329,8 @@ const Team = () => {
               </div>
             </div>
             {/* LEVEL CARD ARE THERE */}
-            <div team-page="" className="team-card">
-              <div team-page="" className="team-item">
+            {/* <div team-page="" className="team-card"> */}
+            {/* <div team-page="" className="team-item">
                 <div team-page="" className="level-name">
                   <img team-page="" src={team_level1} alt="" />
                   <div team-page="" className="level-num">
@@ -300,9 +371,9 @@ const Team = () => {
                 >
                   {t("details")}
                 </Link>
-              </div>
-              {/* card item endsssss */}
-              <div team-page="" className="team-item">
+              </div> */}
+            {/* card item endsssss */}
+            {/* <div team-page="" className="team-item">
                 <div team-page="" className="level-name">
                   <img team-page="" src={team_level2} alt="" />
                   <div team-page="" className="level-num">
@@ -343,9 +414,9 @@ const Team = () => {
                 >
                   {t("details")}
                 </Link>
-              </div>
-              {/* card item endsssss */}
-              <div team-page="" className="team-item">
+              </div> */}
+            {/* card item endsssss */}
+            {/* <div team-page="" className="team-item">
                 <div team-page="" className="level-name">
                   <img team-page="" src={team_level3} alt="" />
                   <div team-page="" className="level-num">
@@ -386,9 +457,9 @@ const Team = () => {
                 >
                   {t("details")}
                 </Link>
-              </div>
-              {/* card item endsssss */}
-            </div>
+              </div> */}
+            {/* card item endsssss */}
+            {/* </div> */}
             {/* team-card ends */}
           </div>
         </div>

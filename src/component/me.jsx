@@ -141,7 +141,7 @@ const HomePage = () => {
                                 me-page=""
                                 className="i-mingcute:vip-2-fill mr-2px text-12px"
                               ></div>
-                              TRONMOSE{data?.user?.my_vip}
+                              TRONRICH{data?.user?.my_vip}
                             </div>
                           </div>
                         </div>
@@ -176,6 +176,24 @@ const HomePage = () => {
                 {/* user-number ends */}
               </div>
             </div>
+
+            <div className="bg-$bg-card px-4 py-3 my-3 rounded-2 w-100">
+              <div className="py-2 px-4 flex gap-4 items-center justify-between rounded-lg">
+                <div className="p-4 bg-deep-card rounded-2 w-100">
+                  <p className="text-sm">total user revenue</p>
+                  <h3 className="fs-5 text-yellow">
+                    {data?.user?.demo_balance || "0.0"}USDT
+                  </h3>
+                </div>
+                <div className="p-4 bg-deep-card rounded-2 w-100">
+                  <p className="text-sm">Added income today</p>
+                  <h3 className="fs-5 text-yellow">
+                    {data?.commission?.refer_com1 || "0.0"}USDT
+                  </h3>
+                </div>
+              </div>
+            </div>
+
             {/* top-info ends */}
             <div me-page="" className="secondary-tools-part">
               <Link me-page="" to="/recharge-method" className="">

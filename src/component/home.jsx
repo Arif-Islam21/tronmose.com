@@ -99,9 +99,11 @@ const home = () => {
           toggleLangPopup={toggleLangPopup}
         ></Header>
         <div className="index-wrap">
-          <HomeUserInfo userInfo={data}></HomeUserInfo>
           <HomeNotice></HomeNotice>
-          <HomeSlider />
+          <div className="mb-3">
+            <HomeSlider />
+          </div>
+          <HomeUserInfo userInfo={data}></HomeUserInfo>
           <HomeLinks></HomeLinks>
           <div className="reative my-$mg text-center text-2xl font-bold text-$btn-text">
             <CountdownTimer targetDate={targetDate} />
