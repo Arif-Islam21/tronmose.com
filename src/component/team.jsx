@@ -31,10 +31,13 @@ import SupportLink from "./extra/supportLink";
 import LanguagePopUp from "./extra/LanguagePopUp";
 import TelegramPopUp from "./extra/TelegramPopUp";
 
+import { FaRegArrowAltCircleRight } from "react-icons/fa";
+
 const Team = () => {
   const { t } = useTranslation();
   const [data, setData] = useState({});
   const [isLoading, setIsLoading] = useState(false); // State to control loader visibility
+  console.log(data);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -122,7 +125,8 @@ const Team = () => {
                   />
                 </div>
               </div>
-            </div>
+            </div>{" "}
+            {/* related to copying referral code */}
             {/* share-card ends */}
             <div
               team-page=""
@@ -143,8 +147,10 @@ const Team = () => {
               team-page=""
               className=":uno: container-card relative rd-$card-radius p-$mg c-$btn-text team-info colorful"
             >
+              {/* TEAM RELATED CONTENTS */}
               <div team-page="" className="team-info-content">
-                <div team-page="" className="other-num">
+                {/* PREVIOUS CODE  */}
+                {/* <div team-page="" className="other-num">
                   <div team-page="" className="item">
                     <div team-page="" className="text-df">
                       {t("team_size")}
@@ -169,7 +175,7 @@ const Team = () => {
                       {data?.totalWithdrawSum || "0"} TRX
                     </div>
                   </div>
-                </div>
+                </div> 
                 <div team-page="" className="other-num">
                   <div team-page="" className="item">
                     <div team-page="" className="text-df">
@@ -195,10 +201,63 @@ const Team = () => {
                       {data.firstTimeWithdraw || "0"}
                     </div>
                   </div>
+                </div> */}
+                {/* PREVIOUS CODE CLOSED */}
+                <div className="py-2 px-4 flex gap-4 items-center justify-between rounded-lg">
+                  <div className="p-4 bg-deep-card rounded-2 w-100">
+                    <p className="text-sm">total user revenue</p>
+                    <h3 className="fs-5 text-yellow">
+                      {data?.user?.demo_balance || "0.0"}USDT
+                    </h3>
+                  </div>
+                  <div className="p-4 bg-deep-card rounded-2 w-100">
+                    <p className="text-sm">Added income today</p>
+                    <h3 className="fs-5 text-yellow">
+                      {data?.commission?.refer_com1 || "0.0"}USDT
+                    </h3>
+                  </div>
                 </div>
               </div>
+
               {/* team info content ends  */}
             </div>
+            <div className="bg-$bg-card px-4 py-3 my-3 rounded-2 h-10 w-100">
+              {/* LEVEL 1 DATA */}
+              <div className="bg-deep-card p-3 rounded-2 px-4">
+                <div className="flex item-center justify-between">
+                  <h1>Level 1 Data</h1>
+                  <h3 className="flex item-center justify-between cursor-pointer fs-6 gap-2">
+                    Member List <FaRegArrowAltCircleRight />
+                  </h3>
+                </div>
+                {/* TITLE ENDS HERE */}
+                <div className="container mt-2">
+                  <div className="row row-cols-1 row-cols-md-3 g-2 ">
+                    <div className="flex flex-col justify-center items-center">
+                      <h3>0</h3>
+                      <h4>Total headcount</h4>
+                    </div>
+                    <div className="flex flex-col justify-center items-center">
+                      <h3>0</h3>
+                      <h4>Number of Active</h4>
+                    </div>
+                    <div className="flex flex-col justify-center items-center">
+                      <h3>0</h3>
+                      <h4>Team Top Up</h4>
+                    </div>
+                    <div className="flex flex-col justify-center items-center">
+                      <h3>0</h3>
+                      <h4>Total Return</h4>
+                    </div>
+                    <div className="flex flex-col justify-center items-center">
+                      <h3>0</h3>
+                      <h4>Today&apos;s Earnings</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/* LEVEL CARD ARE THERE */}
             <div team-page="" className="team-card">
               <div team-page="" className="team-item">
                 <div team-page="" className="level-name">
