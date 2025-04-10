@@ -14,7 +14,7 @@ const HomeUserInfo = ({ userInfo }) => {
               home-content=""
               className="i-mingcute:vip-2-fill mr-2px text-14px c-$btn-text"
             ></div>
-            TRONMOSE{userInfo?.user?.my_vip}
+            TRONRICH{userInfo?.user?.my_vip}
           </div>
         </div>
         <div home-content="" className="balance">

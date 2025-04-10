@@ -25,6 +25,17 @@ import CustomLoader from "./extra/customLoader";
 // icon
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import { IoNotifications, IoWalletOutline } from "react-icons/io5";
+import { PiHandWithdraw } from "react-icons/pi";
+import { MdAccountBalance } from "react-icons/md";
+import { FaArrowTrendUp } from "react-icons/fa6";
+import {
+  FaClipboard,
+  FaDownload,
+  FaGlobe,
+  FaHeadphones,
+  FaLockOpen,
+} from "react-icons/fa";
 
 import axios from "axios";
 import Header from "./extra/Header";
@@ -177,25 +188,84 @@ const HomePage = () => {
               </div>
             </div>
 
+            {/* SERVICES */}
             <div className="bg-$bg-card px-4 py-3 my-3 rounded-2 w-100">
-              <div className="py-2 px-4 flex gap-4 items-center justify-between rounded-lg">
-                <div className="p-4 bg-deep-card rounded-2 w-100">
-                  <p className="text-sm">total user revenue</p>
-                  <h3 className="fs-5 text-yellow">
-                    {data?.user?.demo_balance || "0.0"}USDT
-                  </h3>
+              <div className="container">
+                <div className="row row-cols-1 row-cols-md-3 g-3">
+                  <Link to="/recharge-method" className="col">
+                    <div className="p-4 bg-deep-card d-flex flex-column justify-content-center align-items-center gap-2 rounded-2">
+                      <IoWalletOutline size={32} />
+                      <h2 className="fs-5">{t("recharge")}</h2>
+                    </div>
+                  </Link>
+                  <Link to="/withdraw-trx" className="col">
+                    <div className="p-4 bg-deep-card d-flex flex-column justify-content-center align-items-center gap-2 rounded-2">
+                      <PiHandWithdraw size={32} />
+                      <h2 className="fs-5">{t("withdraw")}</h2>
+                    </div>
+                  </Link>
+                  <Link to="/account" className="col">
+                    <div className="p-4 bg-deep-card d-flex flex-column justify-content-center align-items-center gap-2 rounded-2">
+                      <MdAccountBalance size={32} />
+                      <h2 className="fs-5">{t("account")}</h2>
+                    </div>
+                  </Link>
+                  <Link to="/financial" className="col">
+                    <div className="p-4 bg-deep-card d-flex flex-column justify-content-center align-items-center gap-2 rounded-2">
+                      <FaArrowTrendUp size={32} />
+                      <h2 className="fs-5">{t("financial_record")}</h2>
+                    </div>
+                  </Link>
+                  <Link to="/change-password" className="col">
+                    <div className="p-4 bg-deep-card d-flex flex-column justify-content-center align-items-center gap-2 rounded-2">
+                      <FaLockOpen size={32} />
+                      <h2 className="fs-5">{t("change_pass")}</h2>
+                    </div>
+                  </Link>
                 </div>
-                <div className="p-4 bg-deep-card rounded-2 w-100">
-                  <p className="text-sm">Added income today</p>
-                  <h3 className="fs-5 text-yellow">
-                    {data?.commission?.refer_com1 || "0.0"}USDT
-                  </h3>
+              </div>
+            </div>
+
+            {/* OTHER SERVICES */}
+            <div className="bg-$bg-card px-4 py-3 my-3 rounded-2 w-100">
+              <div className="container">
+                <div className="row row-cols-1 row-cols-md-3 g-3">
+                  <Link className="col">
+                    <div className="p-4 bg-deep-card d-flex flex-column justify-content-center align-items-center gap-2 rounded-2">
+                      <FaClipboard size={32} />
+                      <h2 className="fs-5">{t("help center")}</h2>
+                    </div>
+                  </Link>
+                  <Link className="col">
+                    <div className="p-4 bg-deep-card d-flex flex-column justify-content-center align-items-center gap-2 rounded-2">
+                      <FaHeadphones size={32} />
+                      <h2 className="fs-5">{t("service")}</h2>
+                    </div>
+                  </Link>
+                  <Link className="col">
+                    <div className="p-4 bg-deep-card d-flex flex-column justify-content-center align-items-center gap-2 rounded-2">
+                      <FaGlobe size={32} />
+                      <h2 className="fs-5">{t("language")}</h2>
+                    </div>
+                  </Link>
+                  <Link className="col">
+                    <div className="p-4 bg-deep-card d-flex flex-column justify-content-center align-items-center gap-2 rounded-2">
+                      <IoNotifications size={32} />
+                      <h2 className="fs-5">{t("notification")}</h2>
+                    </div>
+                  </Link>
+                  <Link className="col">
+                    <div className="p-4 bg-deep-card d-flex flex-column justify-content-center align-items-center gap-2 rounded-2">
+                      <FaDownload size={32} />
+                      <h2 className="fs-5">{t("download")}</h2>
+                    </div>
+                  </Link>
                 </div>
               </div>
             </div>
 
             {/* top-info ends */}
-            <div me-page="" className="secondary-tools-part">
+            {/* <div me-page="" className="secondary-tools-part">
               <Link me-page="" to="/recharge-method" className="">
                 <div me-page="" className="item">
                   <div me-page="" className="flex items-center">
@@ -291,7 +361,8 @@ const HomePage = () => {
                   ></div>
                 </div>
               </Link>
-            </div>
+            </div> */}
+            {/* PREVIOUS CODE ENDS HERE */}
             {/* secondary tools part ends */}
             <div me-page="" className="colorful logout cursor-pointer">
               <div
