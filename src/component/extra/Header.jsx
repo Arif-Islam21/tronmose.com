@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 // import logo from "../../assets/images/logo2.webp";
-import logo from "../../assets/images/logo/logo.png";
+import logo from "../../assets/images/logo/logoTRONRICH.png";
 import { useTranslation } from "react-i18next";
 
 const Header = ({ toggleLangPopup }) => {
