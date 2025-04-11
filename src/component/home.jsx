@@ -107,7 +107,7 @@ const home = () => {
           <HomeLinks></HomeLinks>
           <div className="reative my-$mg text-center text-2xl font-bold text-$btn-text">
             <CountdownTimer targetDate={targetDate} />
-            <h5 className="text-sm">{t("task_reset_countdown")}</h5>
+            <h5 className="text-sm">{t("Mining Start Time")}</h5>
           </div>
           <HomeTaskHall showPopup={showPopup} userData={data}></HomeTaskHall>
           <HomeMemberList></HomeMemberList>

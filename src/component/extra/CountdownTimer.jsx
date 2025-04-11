@@ -64,9 +64,9 @@ const CountdownTimer = () => {
   return (
     <div>
       {isError ? ( // Show 0 0 0 if there's an error fetching time
-        <span>Time's up!</span>
+        <span>Mining Time!</span>
       ) : isTimeUp ? (
-        <span>Time's up!</span>
+        <span>Mining Time!</span>
       ) : (
         <div>
           <span>{time.hours.toString().padStart(2, "0")} : </span>

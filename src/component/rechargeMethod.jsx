@@ -33,9 +33,42 @@ import SingleHeader from "./extra/SingleHeader";
 import SupportLink from "./extra/supportLink";
 import TelegramPopUp from "./extra/TelegramPopUp";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const rechargeMethod = () => {
   const navigate = useNavigate();
+  const { t } = useTranslation();
+
+  const rechargeMethod = [
+    {
+      id: 1,
+      name: "TRC20-USDT",
+      image: trc20,
+      link: "/recharge",
+      btnText: "Recharge",
+    },
+    {
+      id: 2,
+      name: "TRX",
+      image: trx,
+      link: "/recharge-trx",
+      btnText: "Recharge TRX",
+    },
+    {
+      id: 3,
+      name: "BEP20-USDT",
+      image: bep20usdt,
+      link: "/recharge-bep20",
+      btnText: "Recharge BEP20",
+    },
+    {
+      id: 4,
+      name: "BNB",
+      image: bnb,
+      link: "/recharge-bnb",
+      btnText: "Recharge BNB",
+    },
+  ];
 
   const handleBackClick = () => {
     navigate(-1); // Navigates to the previous page in history
@@ -49,7 +82,35 @@ const rechargeMethod = () => {
     <div id="app" className="a-t-26 no-4">
       <div className="box-border min-h-full w-full pt-45px">
         <SingleHeader></SingleHeader>
-        <div className="p-$mg">
+
+        {/* NEW CARD SYSTEM */}
+        <div className="bg-$bg-card px-4 py-3 my-3 rounded-2 w-100">
+          <div className="container">
+            <div className="row row-cols-1 row-cols-md-2 g-3">
+              {rechargeMethod?.map((item) => (
+                <Link key={item.id} to={item.link} className="col">
+                  <div className="p-4 bg-deep-card d-flex flex-column justify-content-center align-items-center gap-2 rounded-2">
+                    <img
+                      rc-page=""
+                      src={item.image}
+                      className="h-26.48px w-26.48px shrink-0"
+                    />
+                    <h2 className="fs-3">{t(item.name)}</h2>
+                    <Link
+                      to={item.link}
+                      className="btn btn-primary w-100 btn-sm"
+                    >
+                      {item.btnText}
+                    </Link>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* PREVIOUS CODE */}
+        {/* <div className="p-$mg">
           <div
             rc-page=""
             className=":uno: container-card relative rd-$card-radius p-$mg c-$btn-text mt-12px px-12px py-0"
@@ -127,7 +188,7 @@ const rechargeMethod = () => {
               </div>
             </Link>
           </div>
-        </div>
+        </div> */}
       </div>
 
       <CustomLoader />
