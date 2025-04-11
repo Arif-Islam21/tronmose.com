@@ -14,7 +14,7 @@ import "../assets/css/style9.css";
 import "../assets/css/style10.css";
 import "../assets/css/style11.css";
 
-import logo from "../assets/images/logo2.webp";
+import logo from "../assets/images/logo/logoTRONRICH.png";
 import trc20 from "../assets/images/trc20-usdt.jpg";
 import CopyAddress from "./extra/copyAddress";
 import "../assets/css/style.css";
@@ -122,7 +122,7 @@ const Recharge = () => {
                 src={logo}
                 alt="logo"
               />
-              <div className=":uno: site-name ml-8px">TRONMOSE</div>
+              <div className=":uno: site-name ml-8px">TRONRICH</div>
             </div>
 
             {alertVisible && (

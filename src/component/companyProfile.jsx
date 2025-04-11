@@ -52,14 +52,15 @@ const companyProfile = () => {
             </div>
             <div com-profile="" id="comProContent" className="content">
               <p>
-                <img src={company_profile} /><br/>
+                <img src={company_profile} />
+                <br />
               </p>
-              <p>{t("TRONMOSE_cooperative_group_co")}</p>
+              <p>{t("TRONRICH_cooperative_group_co")}</p>
               <p>{t("as_one_of_the_world")}</p>
               <p>{t("fontera_wants_argiculture")}</p>
               <p>{t("fontera_farms_according")}</p>
-              <p>{t("TRONMOSE_belives_food")}</p>
-              <p>{t("TRONMOSE_must_work_together")}</p>
+              <p>{t("TRONRICH_belives_food")}</p>
+              <p>{t("TRONRICH_must_work_together")}</p>
             </div>
           </div>
         </div>

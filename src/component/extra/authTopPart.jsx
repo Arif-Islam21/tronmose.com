@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import logo from "../../assets/images/logo.webp";
+import logo from "../../assets/images/logo/logoWithName.png";
 import { useTranslation } from "react-i18next";
 
 function authTopPart({ toggleLangPopup, toggleTelegramPopUp }) {
@@ -86,7 +86,7 @@ function authTopPart({ toggleLangPopup, toggleTelegramPopUp }) {
           <div className="logo-show mr-0px">
             <div className=":uno: base-logo flex items-center logo_bar">
               <img
-                className="site-img h-full w-full"
+                className="site-img h-full w-full rounded-8px"
                 src={logo}
                 draggable="false"
                 alt="logo"
@@ -95,7 +95,7 @@ function authTopPart({ toggleLangPopup, toggleTelegramPopUp }) {
           </div>
           {/* <div className="site-name text-20px c-$btn-text">
             <span>
-              {t("welcome_to")} <br /> TRONMOSE
+              {t("welcome_to")} <br /> TRONRICH
             </span>
           </div> */}
         </div>

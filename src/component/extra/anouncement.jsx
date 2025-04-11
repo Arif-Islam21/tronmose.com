@@ -8,7 +8,7 @@ const Announcement = () => {
   const messages = [
     ` <h1>Newbie Questions</h1><br/>
 
-        <h2>How to Become a Partner of TRONMOSE Mining Company?</h2><br/>
+        <h2>How to Become a Partner of TRONRICH Mining Company?</h2><br/>
         <p>To become a partner, simply register! You’ll receive 6000 TRX for free, which you can withdraw 6 months after activation.</p>
 
         <h2>What is the Minimum Deposit & Withdrawal Amount?</h2><br/>
@@ -48,7 +48,7 @@ const Announcement = () => {
 
         `,
 
-        `
+    `
         <h1>VIP Levels and Daily Mining Income</h1><br/>
         <h2>VIP Levels & Mining Rates</h2><br/>
         <table border="1" cellpadding="8" cellspacing="0" class="annoncement_table">
@@ -174,7 +174,8 @@ const Announcement = () => {
             className="mx-auto h-10px w-95% rounded-full bg-$primary"
           ></div>
           <div
-            className="content absolute left-50% top-60px h-310px w-90% translate-x-[-50%] overflow-y-auto p-5px text-black shadow bg-white!"
+            className="content absolute left-50% top-60px h-310px w-90% translate-x-[-50%] overflow-y-auto p-5px text-black shadow"
+            style={{ backgroundColor: "#f39acd" }}
             dangerouslySetInnerHTML={{ __html: messages[currentMessageIndex] }}
           />
           <div className="mt-320px w-full" style={{ marginTop: "327px" }}>

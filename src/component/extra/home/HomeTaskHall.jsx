@@ -17,10 +17,10 @@ const HomeTaskHall = () => {
 
   // State for real-time data
   const [cryptoData, setCryptoData] = useState({
-    trx: '00.00',
-    btc: '00.00',
-    eth: '00.00',
-    bnb: '00.00',
+    trx: "00.00",
+    btc: "00.00",
+    eth: "00.00",
+    bnb: "00.00",
   });
 
   useEffect(() => {
@@ -56,17 +56,19 @@ const HomeTaskHall = () => {
 
   // State for 24-hour stats
   const [cryptoStats, setCryptoStats] = useState({
-    trx: { high: '00.00', low: '00.00', priceChangePercent: '00.00' },
-    btc: { high: '00.00', low: '00.00', priceChangePercent: '00.00' },
-    eth: { high: '00.00', low: '00.00', priceChangePercent: '00.00' },
-    bnb: { high: '00.00', low: '00.00', priceChangePercent: '00.00' },
+    trx: { high: "00.00", low: "00.00", priceChangePercent: "00.00" },
+    btc: { high: "00.00", low: "00.00", priceChangePercent: "00.00" },
+    eth: { high: "00.00", low: "00.00", priceChangePercent: "00.00" },
+    bnb: { high: "00.00", low: "00.00", priceChangePercent: "00.00" },
   });
 
   const fetch24HourStats = async () => {
     try {
       const symbols = ["TRXUSDT", "ETHUSDT", "BTCUSDT", "BNBUSDT"];
       const requests = symbols.map((symbol) =>
-        fetch(`https://api.binance.com/api/v3/ticker/24hr?symbol=${symbol}`).then((response) => response.json())
+        fetch(
+          `https://api.binance.com/api/v3/ticker/24hr?symbol=${symbol}`
+        ).then((response) => response.json())
       );
 
       const data = await Promise.all(requests);
@@ -117,15 +119,21 @@ const HomeTaskHall = () => {
               <span>BTC/USDT</span>
             </div>
             <div className="flex mt-5px items-center justify-between text-#09c497 quata_price">
-              <div>{cryptoData.btc ? `${Number(cryptoData.btc).toFixed(4)}` : "00.00"}</div>
+              <div>
+                {cryptoData.btc
+                  ? `${Number(cryptoData.btc).toFixed(4)}`
+                  : "00.00"}
+              </div>
               <div className="btn_btn_real">
                 <span
-                  style={getPriceChangeStyle(parseFloat(cryptoStats.btcusdt?.priceChangePercent || "0"))}
+                  style={getPriceChangeStyle(
+                    parseFloat(cryptoStats.btcusdt?.priceChangePercent || "0")
+                  )}
                 >
                   {cryptoStats.btcusdt?.priceChangePercent
-                    ? (cryptoStats.btcusdt.priceChangePercent > 0
+                    ? cryptoStats.btcusdt.priceChangePercent > 0
                       ? `+${cryptoStats.btcusdt.priceChangePercent}%`
-                      : `${cryptoStats.btcusdt.priceChangePercent}%`)
+                      : `${cryptoStats.btcusdt.priceChangePercent}%`
                     : "00.00%"}
                 </span>
               </div>
@@ -139,15 +147,21 @@ const HomeTaskHall = () => {
               <span>BNB/USDT</span>
             </div>
             <div className="flex mt-5px items-center justify-between text-#09c497 quata_price">
-              <div>{cryptoData.bnb ? `${Number(cryptoData.bnb).toFixed(4)}` : "00.00"}</div>
+              <div>
+                {cryptoData.bnb
+                  ? `${Number(cryptoData.bnb).toFixed(4)}`
+                  : "00.00"}
+              </div>
               <div className="btn_btn_real">
                 <span
-                  style={getPriceChangeStyle(parseFloat(cryptoStats.bnbusdt?.priceChangePercent || "0"))}
+                  style={getPriceChangeStyle(
+                    parseFloat(cryptoStats.bnbusdt?.priceChangePercent || "0")
+                  )}
                 >
                   {cryptoStats.bnbusdt?.priceChangePercent
-                    ? (cryptoStats.bnbusdt.priceChangePercent > 0
+                    ? cryptoStats.bnbusdt.priceChangePercent > 0
                       ? `+${cryptoStats.bnbusdt.priceChangePercent}%`
-                      : `${cryptoStats.bnbusdt.priceChangePercent}%`)
+                      : `${cryptoStats.bnbusdt.priceChangePercent}%`
                     : "00.00%"}
                 </span>
               </div>
@@ -161,15 +175,21 @@ const HomeTaskHall = () => {
               <span>TRX/USDT</span>
             </div>
             <div className="flex mt-5px items-center justify-between text-#09c497 quata_price">
-              <div>{cryptoData.trx ? `${Number(cryptoData.trx).toFixed(4)}` : "00.00"}</div>
+              <div>
+                {cryptoData.trx
+                  ? `${Number(cryptoData.trx).toFixed(4)}`
+                  : "00.00"}
+              </div>
               <div className="btn_btn_real">
                 <span
-                  style={getPriceChangeStyle(parseFloat(cryptoStats.trxusdt?.priceChangePercent || "0"))}
+                  style={getPriceChangeStyle(
+                    parseFloat(cryptoStats.trxusdt?.priceChangePercent || "0")
+                  )}
                 >
                   {cryptoStats.trxusdt?.priceChangePercent
-                    ? (cryptoStats.trxusdt.priceChangePercent > 0
+                    ? cryptoStats.trxusdt.priceChangePercent > 0
                       ? `+${cryptoStats.trxusdt.priceChangePercent}%`
-                      : `${cryptoStats.trxusdt.priceChangePercent}%`)
+                      : `${cryptoStats.trxusdt.priceChangePercent}%`
                     : "00.00%"}
                 </span>
               </div>
@@ -183,15 +203,21 @@ const HomeTaskHall = () => {
               <span>ETH/USDT</span>
             </div>
             <div className="flex mt-5px items-center justify-between text-#09c497 quata_price">
-              <div>{cryptoData.eth ? `${Number(cryptoData.eth).toFixed(4)}` : "00.00"}</div>
+              <div>
+                {cryptoData.eth
+                  ? `${Number(cryptoData.eth).toFixed(4)}`
+                  : "00.00"}
+              </div>
               <div className="btn_btn_real">
                 <span
-                  style={getPriceChangeStyle(parseFloat(cryptoStats.ethusdt?.priceChangePercent || "0"))}
+                  style={getPriceChangeStyle(
+                    parseFloat(cryptoStats.ethusdt?.priceChangePercent || "0")
+                  )}
                 >
                   {cryptoStats.ethusdt?.priceChangePercent
-                    ? (cryptoStats.ethusdt.priceChangePercent > 0
+                    ? cryptoStats.ethusdt.priceChangePercent > 0
                       ? `+${cryptoStats.ethusdt.priceChangePercent}%`
-                      : `${cryptoStats.ethusdt.priceChangePercent}%`)
+                      : `${cryptoStats.ethusdt.priceChangePercent}%`
                     : "00.00%"}
                 </span>
               </div>

@@ -137,7 +137,7 @@ const recharge = () => {
                 src={logo}
                 alt="logo"
               />
-              <div className=":uno: site-name ml-8px">TRONMOSE</div>
+              <div className=":uno: site-name ml-8px">TRONRICH</div>
             </div>
             {/* base logo ends */}
             <div
@@ -175,7 +175,6 @@ const recharge = () => {
                   rcwallet-addr=""
                   className="qrcode"
                   title="0x5da83820d1dF51AbEE0016a009701d9736a820fF"
-                  
                 >
                   <img
                     alt="Scan me!"

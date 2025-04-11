@@ -15,7 +15,7 @@ import "../assets/css/style7.css";
 import "../assets/css/style8.css";
 import "../assets/css/style9.css";
 
-import logo from "../assets/images/logo.webp";
+import logo from "../assets/images/logo/logoTRONRICH.png";
 // import SupportLink from "./extra/supportLink";
 import CustomLoader from "./extra/customLoader";
 import { useEffect, useState } from "react";
@@ -40,7 +40,7 @@ const withdraw = () => {
       try {
         const response = await axios.get("api/withdraw");
         setData(response.data);
-        setAddress(response.data.user.crypto_address || '');
+        setAddress(response.data.user.crypto_address || "");
       } catch (error) {
         console.error("Error fetching data:", error);
       }

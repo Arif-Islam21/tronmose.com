@@ -72,7 +72,7 @@ const TelegramPopUp = ({ isTelegramVisible, toggleTelegramPopUp }) => {
               onClick={handleRedirect}
             >
               <a
-                href="https://t.me/TRONMOSE"
+                href="https://t.me/TRONRICH"
                 className=":uno: flex cursor-pointer items-center w-100"
               >
                 <img

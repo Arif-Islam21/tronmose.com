@@ -15,7 +15,7 @@ import "../assets/css/style9.css";
 import "../assets/css/style10.css";
 import "../assets/css/style11.css";
 
-import logo from "../assets/images/logo2.webp";
+import logo from "../assets/images/logo/logoTRONRICH.png";
 import bnb from "../assets/images/bnb_icon.png";
 import trx from "../assets/images/trx.webp";
 import CopyAddress from "./extra/copyAddress";
@@ -137,7 +137,7 @@ const recharge = () => {
                 src={logo}
                 alt="logo"
               />
-              <div className=":uno: site-name ml-8px">TRONMOSE</div>
+              <div className=":uno: site-name ml-8px">TRONRICH</div>
             </div>
             {/* base logo ends */}
             <div
