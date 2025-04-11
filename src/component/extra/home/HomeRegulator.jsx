@@ -23,28 +23,28 @@ const HomeRegulator = () => {
             <img
               home-content=""
               src={fssc}
-              className="h-auto max-h-150px max-w-full w-auto rounded-[var(--card-radius)]"
+              className="w-full h-auto max-h-150px max-w-full rounded-[var(--card-radius)]"
             />
           </div>
           <div home-content="" className="w-full">
             <img
               home-content=""
               src={bros}
-              className="h-auto max-h-150px max-w-full w-auto rounded-[var(--card-radius)]"
+              className="w-full h-auto max-h-150px max-w-full rounded-[var(--card-radius)]"
             />
           </div>
           <div home-content="" className="w-full">
             <img
               home-content=""
               src={certifiedIso}
-              className="h-auto max-h-150px max-w-full w-auto rounded-[var(--card-radius)]"
+              className="w-full h-auto max-h-150px max-w-full rounded-[var(--card-radius)]"
             />
           </div>
           <div home-content="" className="w-full">
             <img
               home-content=""
               src={haccp}
-              className="h-auto max-h-150px max-w-full w-auto rounded-[var(--card-radius)]"
+              className="w-full h-auto max-h-150px max-w-full rounded-[var(--card-radius)]"
             />
           </div>
         </div>

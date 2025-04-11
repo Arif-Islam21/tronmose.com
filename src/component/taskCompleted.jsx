@@ -13,7 +13,7 @@ import "../assets/css/style9.css";
 import "../assets/css/style10.css";
 import "../assets/css/style11.css";
 import taskcrypto_mining from "../assets/images/taskcrypto_mining.webp";
-import fan from "../assets/images/fan-DPi5Y_AJ.gif";
+import fan from "../assets/images/1x/miningGif.gif";
 import datarecord from "../assets/images/data.png";
 // component
 import Navbar from "./partial/navbar";
@@ -88,10 +88,10 @@ const Task = () => {
                 <div className="bg-deep-card p-10px rd-$radius mt-10px">
                   <div className="flex items-center justify-between">
                     <div className="text-14px text-$btn-text opacity-70 mr-4px">
-                    {t('level')}
+                      {t("level")}
                     </div>
                     <div className="flex cursor-pointer items-center rounded-full bg-$primary px-8px py-2px text-10px text-$btn-text text-$primary-btn-text!">
-                      {t('vip')} {data?.authbal?.my_vip}
+                      {t("vip")} {data?.authbal?.my_vip}
                     </div>
                   </div>
                   <div className="flex items-center justify-between">

@@ -12,7 +12,7 @@ import "../assets/css/style9.css";
 import "../assets/css/style10.css";
 import "../assets/css/style11.css";
 import taskcrypto_mining from "../assets/images/taskcrypto_mining.webp";
-import fan from "../assets/images/fan-DPi5Y_AJ.gif";
+import fan from "../assets/images/1x/miningGif.gif";
 import datarecord from "../assets/images/data.png";
 import dollar from "../assets/images/dollar.png";
 //component
@@ -115,21 +115,21 @@ const task = () => {
           <div className="top-tag mb-10px py-10px!">
             <div>
               <div className="relative h-160px w-full flex items-center justify-center mt-20px">
-                <img src={fan} className="w-50-p h-auto" />
+                <img src={fan} className="w-70 h-auto" />
               </div>
               <div className="container-card relative rd-$card-radius p-$mg c-$btn-text bg-card2 mt--10px">
                 <div className="bg-deep-card p-10px rd-$radius mt-10px">
                   <div className="flex items-center justify-between">
                     <div className="text-14px text-$btn-text opacity-70 mr-4px">
-                      {t('level')}
+                      {t("level")}
                     </div>
                     <div className="flex cursor-pointer items-center rounded-full bg-$primary px-8px py-2px text-10px text-$btn-text text-$primary-btn-text!">
-                      {t('vip')} {data?.authbal?.my_vip}
+                      {t("vip")} {data?.authbal?.my_vip}
                     </div>
                   </div>
                   <div className="flex items-center justify-between">
                     <div className="text-14px text-$btn-text opacity-70 mr-4px">
-                      {t("all_tasks_for_today")}
+                      {t("todays_earning")}
                     </div>
                     <div>
                       {data?.product && data.withdraw_status > 0 ? 1 : 0}{" "}
@@ -162,13 +162,13 @@ const task = () => {
           >
             <div className="tabs2 ">
               <Link className=":uno: tab-item tab2  active2" to="/task">
-                {t("can_collect")}
+                {t("processing")}
               </Link>
               <Link
                 className=":uno: tab-item tab2 non-active2"
                 to="/task-completed"
               >
-                {t("received")}
+                {t("completed")}
               </Link>
             </div>
 
@@ -192,7 +192,7 @@ const task = () => {
                       className="btn_collect"
                       onClick={toComplete}
                     >
-                      {t('can_collect')}
+                      {t("can_collect")}
                     </button>
                   </div>
                 </div>
@@ -204,7 +204,7 @@ const task = () => {
                       src={datarecord}
                       alt="datarecord"
                     />{" "}
-                    {t('no_data')}
+                    {t("no_data")}
                   </div>
                 </div>
               )}
