@@ -75,60 +75,85 @@ const HomeLinks = () => {
   };
 
   return (
-    <div home-content="" className="main-btn-part">
+    <div home-content="">
+      {/* className="main-btn-part" */}
       {isLoader ? <Loader /> : null}
-      <Link to="/recharge-method" home-content="" className="btn recharge">
+
+      {/* OTHER SERVICES */}
+      <div className="bg-$bg-card px-4 py-3 my-3 rounded-2 w-100">
+        <div className="container">
+          <div className="row row-cols-1 row-cols-md-4 g-3">
+            <Link to="/recharge-method" className="col">
+              <div className="p-4 bg-deep-card d-flex flex-column justify-content-center align-items-center gap-2 rounded-2">
+                <RiMoneyDollarCircleLine size={32} />
+                <h2 className="fs-5">{t("recharge")}</h2>
+              </div>
+            </Link>
+            <Link to="/withdraw-trx" className="col">
+              <div className="p-4 bg-deep-card d-flex flex-column justify-content-center align-items-center gap-2 rounded-2">
+                <IoCashOutline size={32} />
+                <h2 className="fs-5">{t("withdraw")}</h2>
+              </div>
+            </Link>
+            <div home-content="" className="col" onClick={downloadApp}>
+              <div
+                home-content=""
+                className="p-4 bg-deep-card d-flex flex-column justify-content-center align-items-center gap-2 rounded-2"
+              >
+                <FaDownload size={28} color="#fff" />
+                <div home-content="" className="fs-5">
+                  {t("app")}
+                </div>
+              </div>
+            </div>
+            <Link to="/company-profile" className="col">
+              <div className="p-4 bg-deep-card d-flex flex-column justify-content-center align-items-center gap-2 rounded-2">
+                <FaRegBuilding size={28} />
+                <h2 className="">{t("company_profile")}</h2>
+              </div>
+            </Link>
+          </div>
+        </div>
+      </div>
+
+      {/* PREVIOUS */}
+      {/* <Link to="/recharge-method" home-content="" className="btn recharge">
         <div home-content="" className="icon">
           <RiMoneyDollarCircleLine size={28} color="#fff" />
-          {/* <div
-            home-content=""
-            className="i-ic:outline-attach-money text-28px c-$text-white"
-          ></div> */}
         </div>
         <div home-content="" className="label">
           {t("recharge")}
         </div>
-      </Link>
+      </Link> */}
 
-      <Link to="/withdraw-trx" home-content="" className="btn withdraw">
+      {/* <Link to="/withdraw-trx" home-content="" className="btn withdraw">
         <div home-content="" className="icon">
-          {/* <div
-            home-content=""
-            className="i-solar:hand-money-outline text-28px c-$text-white"
-          ></div> */}
           <IoCashOutline size={28} color="#fff" />
         </div>
         <div home-content="" className="label">
           {t("withdraw")}
         </div>
-      </Link>
+      </Link> */}
 
       {/* Correct onClick event handler */}
-      <div home-content="" className="btn download" onClick={downloadApp}>
+      {/* <div home-content="" className="btn download" onClick={downloadApp}>
         <div home-content="" className="icon">
-          {/* <div
-            home-content=""
-            className="i-radix-icons:download text-28px c-$text-white"
-          ></div> */}
           <FaDownload size={28} color="#fff" />
         </div>
         <div home-content="" className="label">
           {t("app")}
         </div>
-      </div>
+      </div> */}
 
-      <Link to="/company-profile" home-content="" className="btn company">
+      {/* <Link to="/company-profile" home-content="" className="btn company">
         <div home-content="" className="icon">
-          {/* <div
-            home-content=""
-            className="i-iconoir:city text-28px c-$text-white"
-          ></div> */}
+         
           <FaRegBuilding size={28} color="#fff" />
         </div>
         <div home-content="" className="label">
           {t("company_profile")}
         </div>
-      </Link>
+      </Link> */}
     </div>
   );
 };
