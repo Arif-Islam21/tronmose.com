@@ -226,9 +226,12 @@ const Team = () => {
               <div className="bg-deep-card p-3 rounded-2 mb-3 px-4">
                 <div className="flex item-center justify-between">
                   <h1 className="fs-6 fw-bold">Level 1 Data</h1>
-                  <h3 className="flex item-center justify-between cursor-pointer fs-6 fw-bold gap-2">
+                  <Link
+                    to="/team/level-one"
+                    className="flex item-center justify-between cursor-pointer fs-6 fw-bold gap-2"
+                  >
                     Member List <FaRegArrowAltCircleRight />
-                  </h3>
+                  </Link>
                 </div>
                 {/* TITLE ENDS HERE */}
 
@@ -261,9 +264,12 @@ const Team = () => {
               <div className="bg-deep-card p-3 rounded-2 mb-3 px-4">
                 <div className="flex item-center justify-between">
                   <h1 className="fs-6 fw-bold">Level 2 Data</h1>
-                  <h3 className="flex item-center justify-between cursor-pointer fs-6 fw-bold gap-2">
+                  <Link
+                    to="/team/level-two"
+                    className="flex item-center justify-between cursor-pointer fs-6 fw-bold gap-2"
+                  >
                     Member List <FaRegArrowAltCircleRight />
-                  </h3>
+                  </Link>
                 </div>
                 {/* TITLE ENDS HERE */}
 
@@ -296,9 +302,12 @@ const Team = () => {
               <div className="bg-deep-card p-3 rounded-2 mb-3 px-4">
                 <div className="flex item-center justify-between">
                   <h1 className="fs-6 fw-bold">Level 3 Data</h1>
-                  <h3 className="flex item-center justify-between cursor-pointer fs-6 fw-bold gap-2">
+                  <Link
+                    to="/team/level-three"
+                    className="flex item-center justify-between cursor-pointer fs-6 fw-bold gap-2"
+                  >
                     Member List <FaRegArrowAltCircleRight />
-                  </h3>
+                  </Link>
                 </div>
                 {/* TITLE ENDS HERE */}
 

@@ -15,7 +15,6 @@ import Check from "./component/extra/check";
 import CustomSnackbarProvider from "./component/extra/SnackbarProvider";
 import PrivateRoute from "./component/auth/PrivateRoute";
 
-
 // all protected routes
 import Home from "./component/home";
 import Me from "./component/me";
@@ -40,6 +39,7 @@ import NoticeContent from "./component/noticeContent";
 import Basic from "./component/basic";
 import ChangePassword from "./component/changePassword";
 import AuthRoute from "./component/auth/AuthRoute";
+import MemberList from "./component/Me/MemberList";
 
 function App() {
   // axios.defaults.baseURL = "http://127.0.0.1:8000/"; // local
@@ -127,6 +127,14 @@ function App() {
               element={
                 <PrivateRoute>
                   <Team />
+                </PrivateRoute>
+              }
+            />
+            <Route
+              path="/team/:memberList"
+              element={
+                <PrivateRoute>
+                  <MemberList />
                 </PrivateRoute>
               }
             />
