@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import anouncment_saving from "../../assets/images/anouncment_saving.webp";
 import home_licence from "../../assets/images/home_licence.webp";
-const Announcement = () => {
+const Notification = ({ setShow, show }) => {
   const { t } = useTranslation();
 
   const messages = [
@@ -72,20 +72,8 @@ const Announcement = () => {
     `,
   ];
 
-  const [show, setShow] = useState(false);
+  //   const [show, setShow] = useState(false);
   const [currentMessageIndex, setCurrentMessageIndex] = useState(0);
-
-  useEffect(() => {
-    // Show the announcement after 2 seconds
-    const showTimeout = setTimeout(() => {
-      setShow(true);
-    }, 2000);
-
-    // Clear timeout if the component unmounts
-    return () => {
-      clearTimeout(showTimeout);
-    };
-  }, []);
 
   const handleClose = () => {
     setShow(false);
@@ -156,4 +144,4 @@ const Announcement = () => {
   );
 };
 
-export default Announcement;
+export default Notification;

@@ -42,6 +42,7 @@ import Header from "./extra/Header";
 import SupportLink from "./extra/supportLink";
 import LanguagePopUp from "./extra/LanguagePopUp";
 import TelegramPopUp from "./extra/TelegramPopUp";
+import Notification from "./Me/Notification";
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -106,6 +107,7 @@ const HomePage = () => {
   };
   // Language popup js
   const [isLanguageVisible, setIsLanguageVisible] = useState(false);
+  const [show, setShow] = useState(false);
 
   const [selectedLanguage, setSelectedLanguage] = useState("English");
   const toggleLangPopup = () => {
@@ -230,30 +232,39 @@ const HomePage = () => {
             <div className="bg-$bg-card px-4 py-3 my-3 rounded-2 w-100">
               <div className="container">
                 <div className="row row-cols-1 row-cols-md-3 g-3">
-                  <Link className="col">
+                  <button
+                    onClick={toggleTelegramPopUp}
+                    className="col bg-$bg-card"
+                  >
                     <div className="p-4 bg-deep-card d-flex flex-column justify-content-center align-items-center gap-2 rounded-2">
                       <FaClipboard size={32} />
                       <h2 className="fs-5">{t("help center")}</h2>
                     </div>
-                  </Link>
-                  <Link className="col">
+                  </button>
+                  <button
+                    onClick={toggleTelegramPopUp}
+                    className="col bg-$bg-card"
+                  >
                     <div className="p-4 bg-deep-card d-flex flex-column justify-content-center align-items-center gap-2 rounded-2">
                       <FaHeadphones size={32} />
                       <h2 className="fs-5">{t("service")}</h2>
                     </div>
-                  </Link>
-                  <Link className="col">
+                  </button>
+                  <button onClick={toggleLangPopup} className="col bg-$bg-card">
                     <div className="p-4 bg-deep-card d-flex flex-column justify-content-center align-items-center gap-2 rounded-2">
                       <FaGlobe size={32} />
                       <h2 className="fs-5">{t("language")}</h2>
                     </div>
-                  </Link>
-                  <Link className="col">
+                  </button>
+                  <button
+                    onClick={() => setShow(!show)}
+                    className="col bg-$bg-card"
+                  >
                     <div className="p-4 bg-deep-card d-flex flex-column justify-content-center align-items-center gap-2 rounded-2">
                       <IoNotifications size={32} />
                       <h2 className="fs-5">{t("notification")}</h2>
                     </div>
-                  </Link>
+                  </button>
                   <Link className="col">
                     <div className="p-4 bg-deep-card d-flex flex-column justify-content-center align-items-center gap-2 rounded-2">
                       <FaDownload size={32} />
@@ -386,6 +397,7 @@ const HomePage = () => {
 
         {/* <SupportLink /> */}
         <CustomLoader />
+        <Notification show={show} setShow={setShow} />
         <Navbar />
       </div>
       <SupportLink toggleTelegramPopUp={toggleTelegramPopUp}></SupportLink>

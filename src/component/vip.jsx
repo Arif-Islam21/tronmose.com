@@ -162,7 +162,7 @@ const Vip = () => {
                           <div className="bg-deep-card rounded-3 p-3 border-top-5 border-warning">
                             <div className="px-4 py-2">
                               <h2 className="fs-3 px-3 border-start-3 ">
-                                TR package {item?.id}
+                                RICH package {item?.id}
                               </h2>
                             </div>
                             <div className="flex flex-column justify-content-center align-items-center gap-2 rounded-2 bg-$bg-card py-2 px-3">
