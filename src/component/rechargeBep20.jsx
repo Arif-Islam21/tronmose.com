@@ -174,7 +174,7 @@ const recharge = () => {
                 <div
                   rcwallet-addr=""
                   className="qrcode"
-                  title="0x5da83820d1dF51AbEE0016a009701d9736a820fF"
+                  title="0x4D3be497bCc424e9eE2dF0b4D4b8eAEB8Eb6C3D2"
                 >
                   <img
                     alt="Scan me!"
@@ -193,7 +193,7 @@ const recharge = () => {
               {t("address")}
             </div>
             <CopyAddress
-              address="0x5da83820d1dF51AbEE0016a009701d9736a820fF"
+              address="0x4D3be497bCc424e9eE2dF0b4D4b8eAEB8Eb6C3D2"
               handleCopyClick={handleCopyClick}
             />
             <a

@@ -97,6 +97,20 @@ const Vip = () => {
   const toggleTelegramPopUp = () => {
     setIsTelegramVisible(!isTelegramVisible);
   };
+
+  const trxLimit = [
+    { starting: 10, ending: 2000 },
+    { starting: 2001, ending: 10000 },
+    { starting: 10001, ending: 25000 },
+    { starting: 25001, ending: 100000 },
+    { starting: 100001, ending: 200000 },
+    { starting: 200001, ending: 300000 },
+    { starting: 300001, ending: 500000 },
+    { starting: 500001, ending: 700000 },
+    { starting: 700001, ending: 800000 },
+    { starting: 800001, ending: 10000000 },
+  ];
+
   return (
     <div id="app" className="a-t-26 no-4">
       <div
@@ -136,7 +150,7 @@ const Vip = () => {
 
             <div className="container-card relative rd-$card-radius p-$mg c-$btn-text">
               {data?.vips?.map((item, index) => {
-                console.log(item);
+                // console.log(item);
                 return (
                   <div
                     key={index}
@@ -148,7 +162,7 @@ const Vip = () => {
                           <div className="bg-deep-card rounded-3 p-3 border-top-5 border-warning">
                             <div className="px-4 py-2">
                               <h2 className="fs-3 px-3 border-start-3 ">
-                                WM package {item?.id}
+                                TR package {item?.id}
                               </h2>
                             </div>
                             <div className="flex flex-column justify-content-center align-items-center gap-2 rounded-2 bg-$bg-card py-2 px-3">
@@ -176,7 +190,7 @@ const Vip = () => {
                                 onClick={clickRecharge}
                                 className="btn btn-light mt-2 mx-auto w-100"
                               >
-                                {item?.requred_to?.slice(0, 2)} USDT Unlock Now
+                                {item?.requred_from} - {item?.requred_to} TRX
                               </button>
                             </div>
                           </div>
