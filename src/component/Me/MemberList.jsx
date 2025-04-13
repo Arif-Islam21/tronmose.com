@@ -27,14 +27,6 @@ const MemberList = () => {
           {memberList} User Information
         </h4>
       </div>
-      {/* <div className="text-center mb-3">
-        <Link className="start" to={-1}>
-          Home
-        </Link>
-        <h4 className="d-inline-block center px-4 py-2 fs-bold rounded-pill bg-danger text-white shadow">
-          {memberList} User Information
-        </h4>
-      </div> */}
 
       <div className="table-responsive">
         <table className="table text-center rounded overflow-hidden">
