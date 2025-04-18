@@ -23,8 +23,7 @@ import { useTranslation } from "react-i18next";
 // import SupportLink from "./extra/supportLink";
 import CustomLoader from "./extra/customLoader";
 // icon
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import { BiTransferAlt } from "react-icons/bi";
 import { IoNotifications, IoWalletOutline } from "react-icons/io5";
 import { PiHandWithdraw } from "react-icons/pi";
 import { MdAccountBalance } from "react-icons/md";
@@ -195,31 +194,37 @@ const HomePage = () => {
               <div className="container">
                 <div className="row row-cols-1 row-cols-md-3 g-3">
                   <Link to="/recharge-method" className="col">
-                    <div className="p-4 bg-deep-card d-flex flex-column justify-content-center align-items-center gap-2 rounded-2">
+                    <div className="p-4 bg-deep-card d-flex flex-column justify-content-center align-items-center gap-2 rounded-2 me-cards">
                       <IoWalletOutline size={32} />
                       <h2 className="fs-5">{t("recharge")}</h2>
                     </div>
                   </Link>
                   <Link to="/withdraw-trx" className="col">
-                    <div className="p-4 bg-deep-card d-flex flex-column justify-content-center align-items-center gap-2 rounded-2">
+                    <div className="p-4 bg-deep-card d-flex flex-column justify-content-center align-items-center gap-2 rounded-2 me-cards">
                       <PiHandWithdraw size={32} />
                       <h2 className="fs-5">{t("withdraw")}</h2>
                     </div>
                   </Link>
+                  <Link to="/withdraw-trx" className="col">
+                    <div className="p-4 bg-deep-card d-flex flex-column justify-content-center align-items-center gap-2 rounded-2 me-cards">
+                      <BiTransferAlt size={32} />
+                      <h2 className="">{t("Transfer to Recharge Account")}</h2>
+                    </div>
+                  </Link>
                   <Link to="/account" className="col">
-                    <div className="p-4 bg-deep-card d-flex flex-column justify-content-center align-items-center gap-2 rounded-2">
+                    <div className="p-4 bg-deep-card d-flex flex-column justify-content-center align-items-center gap-2 rounded-2 me-cards">
                       <MdAccountBalance size={32} />
                       <h2 className="fs-5">{t("account")}</h2>
                     </div>
                   </Link>
                   <Link to="/financial" className="col">
-                    <div className="p-4 bg-deep-card d-flex flex-column justify-content-center align-items-center gap-2 rounded-2">
+                    <div className="p-4 bg-deep-card d-flex flex-column justify-content-center align-items-center gap-2 rounded-2 me-cards">
                       <FaArrowTrendUp size={32} />
                       <h2 className="fs-5">{t("financial_record")}</h2>
                     </div>
                   </Link>
                   <Link to="/change-password" className="col">
-                    <div className="p-4 bg-deep-card d-flex flex-column justify-content-center align-items-center gap-2 rounded-2">
+                    <div className="p-4 bg-deep-card d-flex flex-column justify-content-center align-items-center gap-2 rounded-2 me-cards">
                       <FaLockOpen size={32} />
                       <h2 className="fs-5">{t("change_pass")}</h2>
                     </div>

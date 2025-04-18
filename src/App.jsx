@@ -40,6 +40,7 @@ import Basic from "./component/basic";
 import ChangePassword from "./component/changePassword";
 import AuthRoute from "./component/auth/AuthRoute";
 import MemberList from "./component/Me/MemberList";
+import TransferAmount from "./Pages/TransferAmount";
 
 function App() {
   // axios.defaults.baseURL = "http://127.0.0.1:8000/"; // local
@@ -194,6 +195,14 @@ function App() {
               element={
                 <PrivateRoute>
                   <RechargeMethod />
+                </PrivateRoute>
+              }
+            />
+            <Route
+              path="/transfer-amount"
+              element={
+                <PrivateRoute>
+                  <TransferAmount />
                 </PrivateRoute>
               }
             />

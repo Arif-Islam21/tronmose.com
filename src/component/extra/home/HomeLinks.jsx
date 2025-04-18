@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import axios from "axios";
+import { BiTransferAlt } from "react-icons/bi";
+import "../../../assets/css/style2.css";
 import Loader from "../../../component/extra/loader";
 import { useState } from "react";
 import { RiMoneyDollarCircleLine } from "react-icons/ri";
@@ -82,23 +83,31 @@ const HomeLinks = () => {
       {/* OTHER SERVICES */}
       <div className="bg-$bg-card px-4 py-3 my-3 rounded-2 w-100">
         <div className="container">
-          <div className="row row-cols-1 row-cols-md-4 g-3">
+          <div className="row row-cols-1 row-cols-md-5 g-3">
             <Link to="/recharge-method" className="col">
-              <div className="p-4 bg-deep-card d-flex flex-column justify-content-center align-items-center gap-2 rounded-2">
+              <div className="p-4 bg-deep-card d-flex flex-column justify-content-center align-items-center gap-2 rounded-2 home-cards">
                 <RiMoneyDollarCircleLine size={32} />
                 <h2 className="fs-5">{t("recharge")}</h2>
               </div>
             </Link>
             <Link to="/withdraw-trx" className="col">
-              <div className="p-4 bg-deep-card d-flex flex-column justify-content-center align-items-center gap-2 rounded-2">
+              <div className="p-4 bg-deep-card d-flex flex-column justify-content-center align-items-center gap-2 rounded-2 home-cards">
                 <IoCashOutline size={32} />
                 <h2 className="fs-5">{t("withdraw")}</h2>
+              </div>
+            </Link>
+            <Link to="/transfer-amount" className="col">
+              <div className="p-2 bg-deep-card d-flex flex-column justify-content-center align-items-center gap-2 rounded-2 home-cards">
+                <BiTransferAlt size={32} />
+                <h2 className="small text-center">
+                  {t("Transfer to Recharge Account")}
+                </h2>
               </div>
             </Link>
             <div home-content="" className="col" onClick={downloadApp}>
               <div
                 home-content=""
-                className="p-4 bg-deep-card d-flex flex-column justify-content-center align-items-center gap-2 rounded-2"
+                className="p-4 bg-deep-card d-flex flex-column justify-content-center align-items-center gap-2 rounded-2 home-cards"
               >
                 <FaDownload size={28} color="#fff" />
                 <div home-content="" className="fs-5">
@@ -107,7 +116,7 @@ const HomeLinks = () => {
               </div>
             </div>
             <Link to="/company-profile" className="col">
-              <div className="p-4 bg-deep-card d-flex flex-column justify-content-center align-items-center gap-2 rounded-2">
+              <div className="p-4 bg-deep-card d-flex flex-column justify-content-center align-items-center gap-2 rounded-2 home-cards">
                 <FaRegBuilding size={28} />
                 <h2 className="">{t("company_profile")}</h2>
               </div>

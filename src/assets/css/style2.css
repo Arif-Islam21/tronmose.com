@@ -121,3 +121,13 @@
 .border-top-5 {
   border-top: 8px solid #cbd11d;
 }
+
+.me-cards {
+  min-height: 20vh;
+  max-height: 20vh;
+}
+
+.home-cards {
+  min-height: 20vh;
+  max-height: 20vh;
+}

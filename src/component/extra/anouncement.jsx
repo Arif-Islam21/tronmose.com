@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import anouncment_saving from "../../assets/images/anouncment_saving.webp";
 import home_licence from "../../assets/images/home_licence.webp";
+import "../../assets/css/style.css";
 const Announcement = () => {
   const { t } = useTranslation();
 
@@ -12,6 +13,7 @@ const Announcement = () => {
   
     <h2>Social Media Posting Event</h2><br/>
     <p>After the event starts, users who post specified pictures and text content to social media for a total of 7 days can receive rewards for free. After 7 days of posting, users can take screenshots and consult online customer service to receive cash rewards without deposit.</p><br/>
+    <p>You will receive a 5% bonus on your first deposit. To claim your bonus, please contact customer service.</p><br/>
   
     <p><strong>OFFICIAL SUPPORT:</strong> <a href="https://t.me/TRONRICH09" target="_blank">https://t.me/TRONRICH09</a></p><br/>
   

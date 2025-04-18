@@ -1,0 +1,17 @@
+.transferInput {
+  background-color: #f39acca2;
+  margin: 5px 0;
+  padding: 10px 15px;
+}
+.transferInput::placeholder {
+  color: #fff;
+  font-size: bold;
+}
+.transferBtn {
+  background-color: #f39acca2;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  width: 100%;
+}
