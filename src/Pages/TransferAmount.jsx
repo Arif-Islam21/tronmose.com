@@ -18,7 +18,7 @@ const TransferAmount = () => {
       <div className="box-border min-h-full w-full pt-45px">
         <SingleHeader></SingleHeader>
       </div>
-      <div className="p-4 ">
+      <div className="p-4">
         <div>
           <div className="d-flex align-items-center justify-content-between gap-4 mt-4 mb-4">
             <div className="col">

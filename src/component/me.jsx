@@ -205,7 +205,7 @@ const HomePage = () => {
                       <h2 className="fs-5">{t("withdraw")}</h2>
                     </div>
                   </Link>
-                  <Link to="/withdraw-trx" className="col">
+                  <Link to="/transfer-amount" className="col">
                     <div className="p-4 bg-deep-card d-flex flex-column justify-content-center align-items-center gap-2 rounded-2 me-cards">
                       <BiTransferAlt size={32} />
                       <h2 className="">{t("Transfer to Recharge Account")}</h2>
